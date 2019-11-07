@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
+    @IBOutlet weak var freddyScoreOutlet: UILabel!
+    @IBOutlet weak var jasonScoreOutlet: UILabel!
+    
+    @IBOutlet weak var PlayerTurnCaptionOutlet: UILabel!
     
     @IBOutlet weak var winnerPromptMessage: UILabel!
     
     @IBOutlet weak var playAgainButton: UIButton!
+    
+    var freddyWin = 0
+    var jasonWin = 0
+
     
     @IBAction func playAgainActionMethod(_ sender: UIButton) {
        
@@ -32,7 +39,7 @@ class ViewController: UIViewController {
 
         
         // loop and iterate through the values of the array (1 to 9)
-        // ressetting the images to nil within the scope of the array
+        // ressetting all the images to nil within the scope of the array
         for imageIntTag in 1..<10 {
             if let restartButton = view.viewWithTag(imageIntTag) as? UIButton {
                 restartButton.setImage(nil, for: [])
@@ -59,16 +66,18 @@ class ViewController: UIViewController {
             if currentPlayer == 1 {
                 
                 // Freddy(1) turn
+                
                 gameButton.setImage(UIImage(named: "FK.jpg"), for: [])
                 
                 // Jason(2) turn
+               
                 currentPlayer = 2
-                
+                PlayerTurnCaptionOutlet.text = "JASON TURN"
             } else {
-                
+               
                 gameButton.setImage(UIImage(named: "JV.jpg"), for: [])
                 currentPlayer = 1
-                
+                 PlayerTurnCaptionOutlet.text = "FREDDY TURN"
             }
             
 
@@ -92,16 +101,26 @@ class ViewController: UIViewController {
                     // Play Again Button is presented
                     playAgainButton.isHidden = false
                     
+                    // Hides the player turn caption
+                    PlayerTurnCaptionOutlet.isHidden = true
+                    
                     // determining the winner or draw
                     if gameStatus.contains(0) == false {
                          winnerPromptMessage.text = "DRAW"
                     } else if gameStatus[combo[0]] == 1 {
                         winnerPromptMessage.text = "👹 FREDDY WON 👹"
+                        freddyWin += 1
+                        freddyScoreOutlet.text = "Freddy Score: \(freddyWin)"
                     } else if gameStatus[combo[0]] == 2 {
                         winnerPromptMessage.text = "😈 JASON WON 😈"
+                        jasonWin += 1
+                        jasonScoreOutlet.text = "Jason Score: \(jasonWin))"
                     }
                     
+                    // using for reference for debugging
                     print(gameStatus)
+                    
+                    
 //                    if gameStatus[combo[0]] == 0 {
 //                        winnerPromptMessage.text = "DRAW"
 //
@@ -131,9 +150,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        PlayerTurnCaptionOutlet.isHidden = false
+        PlayerTurnCaptionOutlet.textColor = .red
+        PlayerTurnCaptionOutlet.text = "FREDDY TURN"
         winnerPromptMessage.isHidden = true
         playAgainButton.isHidden = true
+        jasonScoreOutlet.textColor = .white
+        freddyScoreOutlet.textColor = .white
     }
     
     

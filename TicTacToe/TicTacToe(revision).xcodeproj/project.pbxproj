@@ -17,7 +17,7 @@
 		304131912372B0C4003C880B /* Grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 3041318E2372B0C4003C880B /* Grid.png */; };
 		304131922372B0C4003C880B /* JV.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3041318F2372B0C4003C880B /* JV.jpg */; };
 		304131942372CD6A003C880B /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304131932372CD6A003C880B /* GameBoard.swift */; };
-		30FC98532373AC91009C85B7 /* TTT-BOARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC98522373AC91009C85B7 /* TTT-BOARD.png */; };
+		3090B3692375A6DC00585BAE /* TTT-BOARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 3090B3682375A6DB00585BAE /* TTT-BOARD.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		3041318E2372B0C4003C880B /* Grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grid.png; path = "../../TTT-Images/Grid.png"; sourceTree = "<group>"; };
 		3041318F2372B0C4003C880B /* JV.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = JV.jpg; path = "../../TTT-Images/JV.jpg"; sourceTree = "<group>"; };
 		304131932372CD6A003C880B /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
-		30FC98522373AC91009C85B7 /* TTT-BOARD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TTT-BOARD.png"; sourceTree = "<group>"; };
+		3090B3682375A6DB00585BAE /* TTT-BOARD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TTT-BOARD.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +71,9 @@
 				304131932372CD6A003C880B /* GameBoard.swift */,
 				304131792372AF92003C880B /* Main.storyboard */,
 				304131772372AF92003C880B /* ViewController.swift */,
+				3090B3682375A6DB00585BAE /* TTT-BOARD.png */,
 				3041318D2372B0C4003C880B /* FK.jpg */,
 				3041318F2372B0C4003C880B /* JV.jpg */,
-				30FC98522373AC91009C85B7 /* TTT-BOARD.png */,
 				3041318E2372B0C4003C880B /* Grid.png */,
 				3041317C2372AF93003C880B /* Assets.xcassets */,
 				3041317E2372AF93003C880B /* LaunchScreen.storyboard */,
@@ -143,7 +143,7 @@
 				304131802372AF93003C880B /* LaunchScreen.storyboard in Resources */,
 				3041317D2372AF93003C880B /* Assets.xcassets in Resources */,
 				304131912372B0C4003C880B /* Grid.png in Resources */,
-				30FC98532373AC91009C85B7 /* TTT-BOARD.png in Resources */,
+				3090B3692375A6DC00585BAE /* TTT-BOARD.png in Resources */,
 				304131922372B0C4003C880B /* JV.jpg in Resources */,
 				304131902372B0C4003C880B /* FK.jpg in Resources */,
 				3041317B2372AF92003C880B /* Main.storyboard in Resources */,

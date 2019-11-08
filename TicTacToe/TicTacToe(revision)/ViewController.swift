@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playAgainButton: UIButton!
     
-    var freddyWin = 0
-    var jasonWin = 0
+    var freddyWinTotal = 0
+    var jasonWinTotal = 0
 
     
     @IBAction func playAgainActionMethod(_ sender: UIButton) {
@@ -45,11 +45,16 @@ class ViewController: UIViewController {
                 restartButton.setImage(nil, for: [])
             }
             
+            // Player(1) 'Freddy' turn to start
+            PlayerTurnCaptionOutlet.text = "FREDDY TURN"
+            
             // Hides/Removes Winner Message
             winnerPromptMessage.isHidden = true
             
              // Hides/Removes playAgainButton Message
             playAgainButton.isHidden = true
+            
+            
         }
     }
     
@@ -109,15 +114,15 @@ class ViewController: UIViewController {
                          winnerPromptMessage.text = "DRAW"
                     } else if gameStatus[combo[0]] == 1 {
                         winnerPromptMessage.text = "👹 FREDDY WON 👹"
-                        freddyWin += 1
-                        freddyScoreOutlet.text = "Freddy Score: \(freddyWin)"
+                        freddyWinTotal += 1
+                        freddyScoreOutlet.text = "Freddy Score: \(freddyWinTotal)"
                     } else if gameStatus[combo[0]] == 2 {
                         winnerPromptMessage.text = "😈 JASON WON 😈"
-                        jasonWin += 1
-                        jasonScoreOutlet.text = "Jason Score: \(jasonWin))"
+                        jasonWinTotal += 1
+                        jasonScoreOutlet.text = "Jason Score: \(jasonWinTotal)"
                     }
                     
-                    // using for reference for debugging
+                    // using for reference for debugging purposes
                     print(gameStatus)
                     
                     
@@ -134,11 +139,11 @@ class ViewController: UIViewController {
 //
 //                        }
 //                    }
-                    
-                    
-                } else if gameStatus.contains(0) == false {
-                     winnerPromptMessage.text = "DRAW"
                 }
+                    
+//                } else if gameStatus.contains(0) == false {
+//                     winnerPromptMessage.text = "DRAW"
+//                }
 //                if gameStatus.contains(0) == false {
 //                     winnerPromptMessage.text = "DRAW"
 //                }
@@ -155,8 +160,8 @@ class ViewController: UIViewController {
         PlayerTurnCaptionOutlet.text = "FREDDY TURN"
         winnerPromptMessage.isHidden = true
         playAgainButton.isHidden = true
-        jasonScoreOutlet.textColor = .white
-        freddyScoreOutlet.textColor = .white
+        jasonScoreOutlet.textColor = .systemRed
+        freddyScoreOutlet.textColor = .systemRed
     }
     
     
